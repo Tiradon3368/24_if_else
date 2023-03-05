@@ -70,7 +70,7 @@
               </tr>
               <tr>
                 <th scope="row">8</th>
-                <td>50-54</td>
+                <td>0-49</td>
                 <td>E</td>
               </tr>
             </tbody>
@@ -99,7 +99,10 @@
     function score(){
         var score = document.getElementById("score").value;
         var scorev2 = parseInt(score)
-        if(scorev2 >= 80){
+
+        if(scorev2 > 100 && scorev2 < 50){
+            document.getElementById("showS").innerHTML = "กรุณาใส่คะเเนนตามที่กำหนดในตราง"; 
+        }else if(scorev2 >= 80){
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : A"; 
         }else if(scorev2 >= 75){
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : B+"; 
