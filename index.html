@@ -100,7 +100,7 @@
         var score = document.getElementById("score").value;
         var scorev2 = parseInt(score)
 
-        if(scorev2 > 100 && scorev2 < 50){
+        if(scorev2 > 100){
             document.getElementById("showS").innerHTML = "กรุณาใส่คะเเนนตามที่กำหนดในตราง"; 
         }else if(scorev2 >= 80){
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : A"; 
@@ -116,8 +116,10 @@
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : D+"; 
         }else if(scorev2 >= 50){
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : D"; 
-        }else{
+        }else if(scorev2 >= 0){
             document.getElementById("showS").innerHTML = "คะแนนของคุณคือ "+scorev2+" เกรดของคุณ : E"; 
+        }else{
+            document.getElementById("showS").innerHTML = "กรุณาใส่คะเเนนตามที่กำหนดในตราง"; 
         }
     }
 </script>
